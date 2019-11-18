@@ -16,7 +16,7 @@
   <tbody>
     <% @students.each do |student| %>
       <tr>
-        <td><%= student.name %></td>
+        <td><%= student.fname %> <%= student.name %></td>
         <td><%= student.grade %></td>
         <td><%= student.phone_num %></td>
         <td><%= student.parent_name_num %></td>

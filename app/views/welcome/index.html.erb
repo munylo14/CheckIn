@@ -1,4 +1,25 @@
 <h1>Student Check-In</h1>
 <br />
-<br />
 <p>This is the future home of the Student Check-in Kiosk for FBS Students!  Come back soon for more updates!</p>
+<table>
+  <tr>
+    <td>
+      <strong>Student Name</strong>
+    </td>
+    <td>
+      <strong>Student Grade</strong>
+    </td>
+  </tr>
+  <% @students.each do |student| %>
+  <tr>
+    <td>
+      <%= student.fname %> <%= student.name %>
+    </td>
+    <td>
+      <%= student.grade %>
+    </td>
+  </tr>
+<% end %>
+</table>
+<br />
+

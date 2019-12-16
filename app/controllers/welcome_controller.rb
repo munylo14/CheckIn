@@ -5,8 +5,7 @@ class WelcomeController < ApplicationController
   end
 
   def checkin
-  	
-  	
+  
   end 
 
 end

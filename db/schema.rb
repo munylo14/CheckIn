@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_18_004939) do
+ActiveRecord::Schema.define(version: 2019_12_16_035542) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "checkin_logs", force: :cascade do |t|
+    t.boolean "checkedin"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "student_id"
+    t.index ["student_id"], name: "index_checkin_logs_on_student_id"
+  end
 
   create_table "students", force: :cascade do |t|
     t.string "name"

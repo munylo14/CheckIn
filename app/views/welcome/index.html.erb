@@ -19,7 +19,7 @@
       <%= student.grade %>
     </td>
     <td>
-      <%= button_to "Check-In", action: "checkin" %>
+      <%= button_to "Check-In", action: :create, params { student: student, checkedin "true" } %>
     </td>
     <td>
       <%= student.updated_at %>
